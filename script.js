@@ -15,7 +15,7 @@ const modalSteps = document.querySelector('#modal-steps');
 
 function openVictory(key) {
   const data = victoryData[key];
-  if (!data) return;
+  if (!data || !modal || !modalTitle || !modalDescription || !modalSteps) return;
   modalTitle.textContent = data.title;
   modalDescription.textContent = data.description;
   modalSteps.innerHTML = data.steps.map((step, i) => `<div><b>0${i + 1}</b>${step}</div>`).join('');
@@ -28,8 +28,9 @@ document.querySelectorAll('.victory-card').forEach((card) => {
     if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); openVictory(card.dataset.victory); }
   });
 });
-document.querySelector('.modal-close').addEventListener('click', () => modal.close());
-modal.addEventListener('click', (event) => { if (event.target === modal) modal.close(); });
+const modalClose = document.querySelector('.modal-close');
+if (modalClose && modal) modalClose.addEventListener('click', () => modal.close());
+if (modal) modal.addEventListener('click', (event) => { if (event.target === modal) modal.close(); });
 
 document.querySelectorAll('.filter').forEach((button) => {
   button.addEventListener('click', () => {
@@ -65,22 +66,13 @@ databaseTabs.forEach((tab) => {
   });
 });
 
-const searchInput = document.querySelector('#site-search');
-searchInput.addEventListener('input', () => {
-  const query = searchInput.value.trim().toLowerCase();
-  document.querySelectorAll('main article').forEach((item) => item.classList.toggle('search-match', Boolean(query) && item.textContent.toLowerCase().includes(query)));
-});
-
-const menuToggle = document.querySelector('.menu-toggle');
-const nav = document.querySelector('.main-nav');
-menuToggle.addEventListener('click', () => {
-  const isOpen = nav.classList.toggle('open');
-  menuToggle.setAttribute('aria-expanded', String(isOpen));
-});
-nav.querySelectorAll('a').forEach((link) => link.addEventListener('click', () => {
-  nav.classList.remove('open');
-  menuToggle.setAttribute('aria-expanded', 'false');
-}));
+const searchInput = document.querySelector('#site-search, #leader-search');
+if (searchInput) {
+  searchInput.addEventListener('input', () => {
+    const query = searchInput.value.trim().toLowerCase();
+    document.querySelectorAll('main article').forEach((item) => item.classList.toggle('search-match', Boolean(query) && item.textContent.toLowerCase().includes(query)));
+  });
+}
 
 // 百科分类面板：同一位置切换不同知识体系，适合快速查阅。
 const encyclopediaTabs = document.querySelectorAll('.encyclopedia-tab');
