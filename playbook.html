@@ -4,16 +4,22 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>实战手册 · 文明6终极拓荒指南</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Noto+Sans+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <div class="site-shell">
   <header class="site-header">
-    <a class="brand" href="index.html#top" aria-label="返回首页"><span class="brand-mark">VI</span><span>文明6<br><b>终极拓荒指南</b></span></a>
-    <button class="menu-toggle" aria-label="打开菜单" aria-expanded="false">☰</button>
-    <nav class="main-nav" aria-label="主导航">
-      <a href="basics.html">基础玩法</a><a href="victories.html">胜利路线</a><a href="leaders.html">领袖百科</a><a class="database-nav" href="database.html">资料库</a><a href="playbook.html">实战手册</a>
-    </nav>
-    <div class="nav-search"><span>⌕</span><input id="site-search" type="search" placeholder="搜索本页"></div>
+    <div class="nav-wrap">
+      <a class="brand" href="index.html#top" aria-label="返回首页"><span class="brand-mark">VI</span><span><b>文明6</b><small>终极拓荒指南</small></span></a>
+      <button class="menu-toggle" type="button" aria-label="打开导航" aria-expanded="false">☰</button>
+      <nav class="main-nav" aria-label="主导航">
+        <a href="basics.html">基础玩法</a><a href="victories.html">胜利路线</a><a href="leaders.html">领袖百科</a><a class="database-nav" href="database.html">资料库</a><a href="playbook.html">实战手册</a>
+      </nav>
+      <label class="search-box" aria-label="站内搜索"><span aria-hidden="true">⌕</span><input id="site-search" type="search" placeholder="搜索本页"></label>
+    </div>
   </header>
   <main>
     <section class="page-hero container">
@@ -45,7 +51,8 @@
       <div class="advice-grid"><article><h3>什么时候扩张？</h3><p>首都能稳定生产开拓者、第二城有安全落点时就扩张。不要为了一座边境城市牺牲军力和忠诚度。</p></article><article><h3>什么时候开战？</h3><p>有明确目标、可升级的老兵、足够金币和战略资源时开战。没有攻城手段时，不要在城墙下消耗。</p></article><article><h3>政策卡怎么换？</h3><p>生产阶段使用单位/开拓者加速卡；区域阶段切区域卡；战争阶段切军队维护和单位生产卡；和平期及时换回经济卡。</p></article><article><h3>每 10 回合检查</h3><p>宜居度、住房、忠诚度、贸易路线、邻国军力、战略资源、伟人竞争和下一时代的尤里卡/鼓舞。</p></article></div>
     </section>
   </main>
-  <footer class="site-footer"><div><b>VI 文明6 · 终极拓荒指南</b><p>玩家制作的非商业性攻略站。游戏内容与商标归 2K Games / Firaxis Games 所有。</p></div><a href="https://civilization.2k.com/" target="_blank" rel="noreferrer">访问文明 VI 官方网站 ↗</a></footer>
+  <footer class="site-footer"><div class="container footer-inner"><div class="brand"><span class="brand-mark">VI</span><span><b>文明6</b><small>终极拓荒指南</small></span></div><p>玩家制作的非商业性攻略站。游戏内容与商标归 2K Games / Firaxis Games 所有。</p><a href="https://civilization.2k.com/" target="_blank" rel="noreferrer">访问文明 VI 官方网站 ↗</a></div></footer>
+  </div>
   <script src="site-nav.js"></script><script src="script.js"></script>
 </body>
 </html>
