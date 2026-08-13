@@ -162,3 +162,7 @@ body{font-size:12px;line-height:1.55}
   .knowledge-grid article{min-height:unset}
   .resource-column{padding:13px}
 }
+
+/* Keep every page hero headline on one line. */
+.page-hero h1,.hero h1{white-space:nowrap}
+.page-hero h1 br,.hero h1 br{display:none}
