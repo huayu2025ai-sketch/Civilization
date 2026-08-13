@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="文明6终极拓荒指南：从石器时代到信息时代的玩法、胜利路线与领袖百科。" />
+    <title>文明6 · 终极拓荒指南</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Noto+Sans+SC:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="site-shell">
+      <header class="site-header" id="top">
+        <div class="nav-wrap">
+          <a class="brand" href="#top" aria-label="返回顶部">
+            <span class="brand-mark">VI</span>
+            <span><b>文明6</b><small>终极拓荒指南</small></span>
+          </a>
+          <button class="menu-toggle" type="button" aria-label="打开导航" aria-expanded="false">☰</button>
+          <nav class="main-nav" aria-label="主导航">
+            <a href="#basics">基础概念</a>
+            <a href="#victory">胜利条件</a>
+            <a href="#encyclopedia">百科索引</a>
+            <a href="#playbook">实战路线</a>
+            <a href="#leaders">领袖推荐</a>
+            <a href="#roadmap">时代与文明</a>
+            <a href="#advanced">进阶技巧</a>
+          </nav>
+          <label class="search-box" aria-label="站内搜索">
+            <span aria-hidden="true">⌕</span>
+            <input id="site-search" type="search" placeholder="搜索攻略、领袖或产出..." />
+          </label>
+        </div>
+      </header>
+
+      <main>
+        <section class="hero container" aria-labelledby="hero-title">
+          <div class="hero-copy">
+            <p class="eyebrow"><span></span> 探索 · 扩张 · 开发 · 征服</p>
+            <h1 id="hero-title">从石器时代到<br /><em>信息时代</em></h1>
+            <p class="hero-lede">《文明VI》新手与进阶全攻略</p>
+            <p class="hero-text">在历史的长河中书写属于你的文明。掌握 4X 核心循环，在每一个回合做出改变世界的决定。</p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="#victory">开始探索 <span>→</span></a>
+              <a class="button button-ghost" href="#leaders">查看胜利路线 <span>↗</span></a>
+            </div>
+            <div class="hero-stats" aria-label="指南概览">
+              <div><strong>6</strong><span>种胜利方式</span></div>
+              <div><strong>100+</strong><span>回合规划</span></div>
+              <div><strong>50</strong><span>位领袖速查</span></div>
+            </div>
+          </div>
+          <div class="hero-art" aria-label="文明时代视觉装饰">
+            <div class="orbital orbital-one"></div><div class="orbital orbital-two"></div>
+            <div class="compass"><span>N</span><i>✦</i><span>S</span></div>
+            <div class="era-card"><span>当前时代</span><b>古典时代</b><small>TURN 42 · 4000 BC</small></div>
+            <div class="stat-pill pill-one">⚒ <b>+3</b> 邻接加成</div>
+            <div class="stat-pill pill-two">◈ <b>12.4K</b> 文化值</div>
+          </div>
+        </section>
+
+        <section class="section basics-section" id="basics" aria-labelledby="basics-title">
+          <div class="section-heading"><div><p class="eyebrow"><span></span> 序章 · 4X 核心循环</p><h2 id="basics-title">每一回合，都在改变版图</h2></div><p>先理解系统之间的联动，<br />再谈最优解。</p></div>
+          <div class="basics-grid">
+            <article class="basic-card"><span class="basic-no">01</span><div class="basic-icon">◎</div><h3>探索 Explore</h3><p>侦察兵不是“开地图工具”，而是你的情报网。优先寻找自然奇观、部落村庄、城邦与邻国首都，决定首都落点和第一条科技路线。</p><div class="tip-line">开局建议：侦察兵 → 投石兵 → 工人</div></article>
+            <article class="basic-card"><span class="basic-no">02</span><div class="basic-icon">◇</div><h3>扩张 Expand</h3><p>城市数量决定区域上限与总产出，但盲目铺城会拖垮忠诚度与维护费。把第二城放在战略资源、河流或高邻接位置。</p><div class="tip-line">城市间距：通常保持 4—6 格</div></article>
+            <article class="basic-card"><span class="basic-no">03</span><div class="basic-icon">⚒</div><h3>开发 Exploit</h3><p>改良地块、规划区域、连接贸易路线，才能把地图潜力兑现成科技、文化、金币、信仰和生产力。产出不是越多越好，而是要服务胜利方向。</p><div class="tip-line">先定胜利方向，再锁区域地块</div></article>
+            <article class="basic-card"><span class="basic-no">04</span><div class="basic-icon">♜</div><h3>征服 Exterminate</h3><p>战争既是胜利路线，也是外交与空间管理工具。保持军力足以自卫，利用战争赔款、战略资源和关键城市削弱领先对手。</p><div class="tip-line">不主动开战，也要保持威慑</div></article>
+          </div>
+          <div class="resource-strip"><div><b>⚙ 生产力</b><span>决定你多久完成单位、建筑与奇观</span></div><div><b>✦ 科技</b><span>解锁单位、区域与时代能力</span></div><div><b>◈ 文化</b><span>推动市政树、政策卡与领土扩张</span></div><div><b>◉ 金币</b><span>购买地块、单位与外交关系</span></div></div>
+        </section>
+
+        <section class="section container" id="victory" aria-labelledby="victory-title">
+          <div class="section-heading"><div><p class="eyebrow"><span></span> 第一章 · 基础概念</p><h2 id="victory-title">选择你的胜利方式</h2></div><p>每条路线都有独特的节奏。<br />找到最适合你的文明。</p></div>
+          <div class="victory-grid">
+            <article class="victory-card featured" data-victory="science" tabindex="0"><span class="card-number">01</span><div class="card-icon">⌁</div><h3>科技胜利</h3><p>让人类的第一艘火箭抵达群星</p><button class="text-button" type="button">查看路线 <span>→</span></button></article>
+            <article class="victory-card" data-victory="culture" tabindex="0"><span class="card-number">02</span><div class="card-icon">♢</div><h3>文化胜利</h3><p>让世界为你的艺术与遗产倾倒</p><button class="text-button" type="button">查看路线 <span>→</span></button></article>
+            <article class="victory-card" data-victory="domination" tabindex="0"><span class="card-number">03</span><div class="card-icon">♜</div><h3>统治胜利</h3><p>征服所有对手的首都，建立帝国</p><button class="text-button" type="button">查看路线 <span>→</span></button></article>
+            <article class="victory-card" data-victory="religion" tabindex="0"><span class="card-number">04</span><div class="card-icon">✣</div><h3>宗教胜利</h3><p>让你的信仰传播至世界每个角落</p><button class="text-button" type="button">查看路线 <span>→</span></button></article>
+            <article class="victory-card" data-victory="diplomatic" tabindex="0"><span class="card-number">05</span><div class="card-icon">♧</div><h3>外交胜利</h3><p>以智慧与合作成为世界的领袖</p><button class="text-button" type="button">查看路线 <span>→</span></button></article>
+            <article class="victory-card" data-victory="score" tabindex="0"><span class="card-number">06</span><div class="card-icon">✦</div><h3>分数胜利</h3><p>在时间尽头，成为最伟大的文明</p><button class="text-button" type="button">查看路线 <span>→</span></button></article>
+          </div>
+        </section>
+
+        <section class="section container playbook-section" id="playbook" aria-labelledby="playbook-title">
+          <div class="section-heading"><div><p class="eyebrow"><span></span> 实战手册 · 可执行路线</p><h2 id="playbook-title">从第一回合开始怎么做</h2></div><p>不要只知道“应该发展”，<br />要知道下一步生产什么。</p></div>
+          <div class="playbook-layout">
+            <div class="build-order"><div class="build-order-head"><span>标准开局模板</span><b>适合大多数文明</b></div><ol><li><span>01</span><div><b>侦察兵</b><small>开视野、找村庄、找城邦、确认邻国位置</small></div><em>TURN 1—8</em></li><li><span>02</span><div><b>投石兵 / 战士</b><small>满足尤里卡，同时避免被野蛮人压制</small></div><em>TURN 8—18</em></li><li><span>03</span><div><b>开拓者</b><small>首都达到可接受人口后，尽快建立第二城</small></div><em>TURN 18—32</em></li><li><span>04</span><div><b>纪念碑 / 工人</b><small>补文化、改良资源，并为第一个区域做准备</small></div><em>TURN 25—45</em></li><li><span>05</span><div><b>定制区域</b><small>学院、商业中心、剧院广场或军营，取决于胜利方向</small></div><em>TURN 35+</em></li></ol></div>
+            <div class="route-matrix"><div class="route-card route-science"><span>SCIENCE</span><h3>科技胜利</h3><p>学院 → 工业区 → 太空港</p><div><b>关键指标</b><small>科技值 · 生产力 · 大科学家 · 太空项目</small></div><div><b>最怕什么</b><small>城市少、生产低、被战争打断</small></div></div><div class="route-card route-culture"><span>CULTURE</span><h3>文化胜利</h3><p>剧院广场 → 奇观 → 旅游</p><div><b>关键指标</b><small>文化值 · 伟人作品 · 国内外旅游</small></div><div><b>最怕什么</b><small>只堆文化、不做开放边界和旅游倍率</small></div></div><div class="route-card route-domination"><span>DOMINATION</span><h3>统治胜利</h3><p>军营 → 铁 / 马 → 军团</p><div><b>关键指标</b><small>军力差 · 战略资源 · 机动性 · 经济</small></div><div><b>最怕什么</b><small>战线过长、攻城不足、战争疲劳</small></div></div><div class="route-card route-faith"><span>FAITH</span><h3>宗教胜利</h3><p>圣地 → 先知 → 使徒</p><div><b>关键指标</b><small>信仰值 · 圣城 · 传播路线 · 使徒升级</small></div><div><b>最怕什么</b><small>只造传教士、不保护圣地和宗教单位</small></div></div></div>
+          </div>
+        </section>
+
+        <section class="section tinted resource-section" aria-labelledby="resource-title"><div class="container"><div class="section-heading"><div><p class="eyebrow"><span></span> 系统手册 · 地块与单位</p><h2 id="resource-title">资源、改良与单位选择</h2></div><p>地图上的每一格，<br />都对应一种机会成本。</p></div><div class="resource-guide"><div class="resource-column"><h3>奢侈资源</h3><p>优先改良一份即可为多个城市提供宜居度。多余的同类资源适合卖给 AI 换金币，不要为了“收集齐”占用工人回合。</p><ul><li>人口多、宜居度低：优先改良</li><li>重复资源：交易、不要囤积</li><li>奢侈资源也是外交筹码</li></ul></div><div class="resource-column"><h3>战略资源</h3><p>铁、马、硝石、煤、石油和铀决定中后期兵种与工业。战争前先确认资源分布，不能生产的兵种不应成为主计划。</p><ul><li>资源出现后及时改良与储备</li><li>资源短缺时改走替代兵种</li><li>贸易与征服都能解决缺口</li></ul></div><div class="resource-column"><h3>工人与改良</h3><p>工人有有限次数，优先改良能立即增加产出的地块。砍伐森林不是浪费，而是把未来地块价值提前转化为关键项目。</p><ul><li>先改良首都高产地块</li><li>需要抢节奏时再砍伐加速</li><li>避免为低人口城市提前铺满地块</li></ul></div><div class="resource-column"><h3>单位升级</h3><p>升级通常比重新生产更节省时间。保留老兵、积累经验，再用金币升级；战争前预留现金，不要把钱全花在地块上。</p><ul><li>远程单位优先保留经验</li><li>近战负责占城与护航</li><li>骑兵适合绕后、掠夺和追击</li></ul></div></div></div></section>
+
+        <section class="section tinted encyclopedia-section" id="encyclopedia" aria-labelledby="encyclopedia-title">
+          <div class="container">
+            <div class="section-heading"><div><p class="eyebrow"><span></span> 文明百科 · 系统索引</p><h2 id="encyclopedia-title">从一座城市，读懂整个文明</h2></div><p>把复杂机制拆成<br />随时可查的知识卡片。</p></div>
+            <div class="encyclopedia-tabs" role="tablist" aria-label="百科分类">
+              <button class="encyclopedia-tab active" data-tab="city" role="tab" aria-selected="true">城市与区域</button>
+              <button class="encyclopedia-tab" data-tab="tech" role="tab" aria-selected="false">科技与市政</button>
+              <button class="encyclopedia-tab" data-tab="war" role="tab" aria-selected="false">军事与战争</button>
+              <button class="encyclopedia-tab" data-tab="diplomacy" role="tab" aria-selected="false">外交与城邦</button>
+              <button class="encyclopedia-tab" data-tab="people" role="tab" aria-selected="false">总督与伟人</button>
+              <button class="encyclopedia-tab" data-tab="settings" role="tab" aria-selected="false">难度与设置</button>
+            </div>
+            <div class="encyclopedia-panels">
+              <div class="encyclopedia-panel active" data-panel="city" role="tabpanel">
+                <div class="panel-intro"><span class="panel-symbol">⌂</span><div><h3>城市与区域规划</h3><p>人口决定区域槽位，地形决定区域价值，产出决定文明的节奏。规划前先问自己：这座城市是为了生产、科技、文化，还是为了支撑前线？</p></div></div>
+                <div class="knowledge-grid"><article><b>人口与住房</b><p>住房不足会限制人口增长；粮食和住房共同决定城市能否继续长大。沿河、海岸、湖泊建城通常更容易解决早期住房。</p><small>优先级：住房 ＞ 粮食 ＞ 区域</small></article><article><b>忠诚度</b><p>边境城市受邻近强大文明影响时会掉忠诚。用总督、娱乐设施、政策卡和附近城市人口抵消压力，别把孤城丢在敌人腹地。</p><small>边境原则：先稳忠诚，再谈扩张</small></article><article><b>区域上限</b><p>每个区域通常需要一定人口才能建造。不要为了“每城全套区域”浪费地块；胜利路线只需要少数关键区域，其他城市负责补足产出。</p><small>规划原则：区域服务胜利方向</small></article><article><b>奇观取舍</b><p>奇观很诱人，但它们占用地块、消耗大量生产力。只有当奇观能直接放大你的路线，或你拥有明确的地形与生产优势时才值得抢。</p><small>警戒线：不要因奇观错过扩张窗口</small></article></div>
+              </div>
+              <div class="encyclopedia-panel" data-panel="tech" role="tabpanel">
+                <div class="panel-intro"><span class="panel-symbol">✦</span><div><h3>科技树与市政树</h3><p>科技解锁单位、建筑和区域；市政解锁政策卡、政府、外交能力和领土工具。两棵树不是竞速条，而是你当前问题的解决方案。</p></div></div>
+                <div class="knowledge-grid"><article><b>尤里卡管理</b><p>不要机械地追所有尤里卡。优先完成与你的胜利路线、当前地形和下一次升级有关的条件，研究进度要服务节奏。</p><small>科技胜利：学院、工业、火箭、核裂变</small></article><article><b>市政与政策卡</b><p>每次解锁市政都要重新检查政策槽位。生产加速卡、区域加速卡、军队维护卡和伟人点数卡，常常比新建筑更有即时价值。</p><small>好习惯：每次市政完成都换卡</small></article><article><b>政府选择</b><p>古典共和国适合和平扩张与伟人路线；寡头政治适合早期防守和军事压迫；商人共和国适合中期铺城与购买地块。</p><small>选择政府：看你接下来 30 回合</small></article><article><b>时代节奏</b><p>尽量避免科技与市政树完全脱节。科技领先但文化落后会缺政策，文化领先但科技落后会缺单位与区域，稳定的双线更可靠。</p><small>目标：保持双树同步推进</small></article></div>
+              </div>
+              <div class="encyclopedia-panel" data-panel="war" role="tabpanel">
+                <div class="panel-intro"><span class="panel-symbol">♜</span><div><h3>军事与战争艺术</h3><p>战争的关键不是单位数量，而是战场信息、地形、升级、补给与合适的时机。先建立局部优势，再推进目标。</p></div></div>
+                <div class="knowledge-grid"><article><b>兵种克制</b><p>远程单位负责输出，近战单位负责占领，骑兵负责机动，攻城单位负责拆城防。不要让单一兵种独自承担整条战线。</p><small>基本编队：前排 + 远程 + 支援</small></article><article><b>升级与军团</b><p>保留高经验单位比不断换新兵更有效。进入中后期后，把核心单位升级为军团或军队，利用夹击与支援加成解决高防城市。</p><small>原则：先升级老兵，再补充数量</small></article><article><b>攻城流程</b><p>先切断城市周边支援，再用远程和攻城单位拆城墙。不要把近战单位送进城防火力范围，等待城防下降后再占领。</p><small>顺序：侦察 → 封锁 → 破墙 → 占领</small></article><article><b>战争疲劳</b><p>长期战争会降低宜居度并拖累经济。设定清晰的战争目标，拿到关键城市、资源或赔款后及时议和，让生产重新回到胜利路线。</p><small>战争不是终点，是战略杠杆</small></article></div>
+              </div>
+              <div class="encyclopedia-panel" data-panel="diplomacy" role="tabpanel">
+                <div class="panel-intro"><span class="panel-symbol">♧</span><div><h3>外交、城邦与世界议会</h3><p>外交不是“谁都不得罪”，而是把竞争对手变成可预测的变量。利用贸易、议程、城邦和使者为自己争取时间与资源。</p></div></div>
+                <div class="knowledge-grid"><article><b>城邦任务</b><p>完成城邦任务往往比盲目派使者更划算。宗主国效果应与你的胜利方向匹配：科技城邦、工业城邦和文化城邦尤其值得优先争取。</p><small>派使者前：先看任务与宗主加成</small></article><article><b>交易与开放边界</b><p>卖出暂时用不到的战略资源，换取金币、奢侈品和外交好感。开放边界能增进关系，也会让对方更容易侦察你的城市。</p><small>贸易要点：现金流比面子重要</small></article><article><b>议程与外交支持</b><p>世界议会中不要只投自己喜欢的选项。观察其他文明的票数，关键回合用外交支持换资源，或用反向投票阻止竞争者得分。</p><small>投票目标：阻止领先者，而非追求完美</small></article><article><b>间谍系统</b><p>间谍可以窃取科技、破坏区域、监听城市并保护你的核心。落后时优先窃取科技，领先时优先反间谍保护关键区域。</p><small>间谍配置：进攻一名，防守一名</small></article></div>
+              </div>
+              <div class="encyclopedia-panel" data-panel="people" role="tabpanel">
+                <div class="panel-intro"><span class="panel-symbol">♙</span><div><h3>总督、伟人和关键人物</h3><p>总督是城市专精工具，伟人是路线加速器。不要只看面板上的“强”，要看他们能否在未来 20—30 回合产生复利。</p></div></div>
+                <div class="knowledge-grid"><article><b>总督任命</b><p>梁适合改良资源与城市建设，平伽拉适合科技文化核心城，阿玛尼适合城邦外交，马格努斯适合森林砍伐与高生产城市。</p><small>常见开局：平伽拉 → 梁 / 马格努斯</small></article><article><b>伟大科学家</b><p>科学胜利优先关注学院产出、尤里卡、科技值和后期太空项目。伟人被其他文明抢走时，及时调整路线，不要停在原地等待。</p><small>伟人点数：区域 + 建筑 + 政策卡</small></article><article><b>伟大工程师</b><p>工程师能加速奇观、区域或项目。适合生产力不足但有明确奇观目标的文明，也适合后期快速完成关键项目。</p><small>使用前：确认能否直接改变时间线</small></article><article><b>伟大商人和艺术家</b><p>商人解决经济和贸易瓶颈，艺术家与作家直接服务文化胜利。文化路线要为作品预留博物馆、主题化和旅游传播空间。</p><small>文化核心：作品库存 + 旅游倍率</small></article></div>
+              </div>
+              <div class="encyclopedia-panel" data-panel="settings" role="tabpanel">
+                <div class="panel-intro"><span class="panel-symbol">⚙</span><div><h3>难度、地图与游戏设置</h3><p>正确的设置能让学习曲线更平滑。新手不必直接追求最高难度，先通过合理的地图和速度理解系统反馈。</p></div></div>
+                <div class="knowledge-grid"><article><b>难度建议</b><p>开拓者适合熟悉操作，酋长适合理解经济与城市，军阀开始考验邻国关系，王子以后 AI 会获得明显的开局优势。</p><small>推荐：先用王子完成每种胜利一次</small></article><article><b>地图选择</b><p>大陆图适合综合玩法，盘古大陆更容易早期接触与战争，群岛图强化海军、港口和海岸城市，内海图适合贸易与文化。</p><small>学习区域：大陆 / 低海平面</small></article><article><b>速度与规模</b><p>史诗和马拉松能拉长发展窗口，但也会放大战争疲劳和决策成本。标准速度更适合练习回合规划和胜利时间。</p><small>默认推荐：标准速度 · 8 文明</small></article><article><b>重开与复盘</b><p>重开不是失败，而是实验。每局结束记录首都落点、第一座区域、第一次战争和胜利回合，下局只改一个变量。</p><small>复盘问题：我在哪个节点失去主动权？</small></article></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section tinted" id="leaders" aria-labelledby="leaders-title">
+          <div class="container"><div class="section-heading"><div><p class="eyebrow"><span></span> 第二章 · 领袖速查</p><h2 id="leaders-title">找到你的天命领袖</h2></div><p>从稳定的科技引擎到<br />令人窒息的军事压迫。</p></div>
+            <div class="filter-row" role="group" aria-label="筛选领袖"><button class="filter active" data-filter="all">重点领袖 <span>14</span></button><button class="filter" data-filter="science">科技专精</button><button class="filter" data-filter="culture">文化专精</button><button class="filter" data-filter="aggressive">侵略扩张</button><button class="filter filter-directory" type="button" data-filter="directory">查看完整名录 67</button></div>
+            <div class="leader-grid" id="leader-grid">
+              <article class="leader-card" data-tags="science"><div class="leader-portrait portrait-de" data-avatar="Frederick Barbarossa (Civ6)"><span>德</span></div><div class="leader-info"><span class="leader-civ">德国 · 工业引擎</span><h3>腓特烈·巴巴罗萨</h3><p>区域规划大师，强大的生产力与额外区域槽位。</p><div class="leader-tags"><span>科技</span><span>生产</span></div></div><span class="leader-arrow">↗</span></article>
+              <article class="leader-card" data-tags="science"><div class="leader-portrait portrait-korea" data-avatar="Sejong (Civ6)"><span>韩</span></div><div class="leader-info"><span class="leader-civ">韩国 · 学院之国</span><h3>世宗大王</h3><p>围绕特色区域建立最稳定的科技领先曲线。</p><div class="leader-tags"><span>科技</span><span>研究</span></div></div><span class="leader-arrow">↗</span></article>
+              <article class="leader-card" data-tags="culture"><div class="leader-portrait portrait-greece" data-avatar="Pericles (Civ6)"><span>希</span></div><div class="leader-info"><span class="leader-civ">希腊 · 雅典民主</span><h3>伯里克利</h3><p>城邦加成与卫城文化，让文化胜利顺势而来。</p><div class="leader-tags"><span>文化</span><span>城邦</span></div></div><span class="leader-arrow">↗</span></article>
+              <article class="leader-card" data-tags="aggressive"><div class="leader-portrait portrait-zulu" data-avatar="Shaka (Civ6)"><span>祖</span></div><div class="leader-info"><span class="leader-civ">祖鲁 · 军团之王</span><h3>恰卡</h3><p>利用军团与军团编制迅速滚起征服雪球。</p><div class="leader-tags"><span>统治</span><span>军事</span></div></div><span class="leader-arrow">↗</span></article>
+              <article class="leader-card" data-tags="culture"><div class="leader-portrait portrait-japan" data-avatar="Hojo Tokimune (Civ6)"><span>日</span></div><div class="leader-info"><span class="leader-civ">日本 · 和风布局</span><h3>北条时宗</h3><p>擅长紧凑城市群，区域相邻加成更容易成型。</p><div class="leader-tags"><span>文化</span><span>区域</span></div></div><span class="leader-arrow">↗</span></article>
+              <article class="leader-card" data-tags="science"><div class="leader-portrait portrait-australia" data-avatar="John Curtin (Civ6)"><span>澳</span></div><div class="leader-info"><span class="leader-civ">澳大利亚 · 海岸线</span><h3>约翰·科廷</h3><p>沿海地形与高魅力地块，为科技文化双线提供弹性。</p><div class="leader-tags"><span>科技</span><span>海岸</span></div></div><span class="leader-arrow">↗</span></article>
+              <article class="leader-card" data-tags="aggressive"><div class="leader-portrait portrait-mongolia" data-avatar="Genghis Khan (Civ6)"><span>蒙</span></div><div class="leader-info"><span class="leader-civ">蒙古 · 草原之风</span><h3>成吉思汗</h3><p>骑兵、贸易与外交视野结合，适合快速寻找突破口。</p><div class="leader-tags"><span>统治</span><span>骑兵</span></div></div><span class="leader-arrow">↗</span></article>
+              <article class="leader-card" data-tags="culture"><div class="leader-portrait portrait-egypt" data-avatar="Cleopatra (Civ6)"><span>埃</span></div><div class="leader-info"><span class="leader-civ">埃及 · 尼罗河谷</span><h3>克娄巴特拉</h3><p>河流与奇观规划能力强，适合把旅游业滚到后期。</p><div class="leader-tags"><span>文化</span><span>奇观</span></div></div><span class="leader-arrow">↗</span></article>
+              <article class="leader-card" data-tags="aggressive"><div class="leader-portrait portrait-rome" data-avatar="Trajan (Civ6)"><span>罗</span></div><div class="leader-info"><span class="leader-civ">罗马 · 道路帝国</span><h3>图拉真</h3><p>免费纪念碑与道路网络让新手也能稳定扩张。</p><div class="leader-tags"><span>扩张</span><span>通用</span></div></div><span class="leader-arrow">↗</span></article>
+              <article class="leader-card" data-tags="science"><div class="leader-portrait portrait-china" data-avatar="Qin Shi Huang (Civ6)"><span>中</span></div><div class="leader-info"><span class="leader-civ">中国 · 工程帝国</span><h3>秦始皇（统一者）</h3><p>奇观与长城规划能力强，适合稳健发育后转科技。</p><div class="leader-tags"><span>科技</span><span>奇观</span></div></div><span class="leader-arrow">↗</span></article>
+              <article class="leader-card" data-tags="science"><div class="leader-portrait portrait-arabia" data-avatar="Saladin (Civ6)"><span>阿</span></div><div class="leader-info"><span class="leader-civ">阿拉伯 · 信仰科技</span><h3>萨拉丁</h3><p>宗教、科技与外交互相增益，适合多线运营。</p><div class="leader-tags"><span>科技</span><span>宗教</span></div></div><span class="leader-arrow">↗</span></article>
+              <article class="leader-card" data-tags="culture"><div class="leader-portrait portrait-france" data-avatar="Catherine de Medici (Civ6)"><span>法</span></div><div class="leader-info"><span class="leader-civ">法国 · 城堡与外交</span><h3>凯瑟琳·德·美第奇</h3><p>间谍、奇观与奢侈品加成，适合信息优势型文化胜利。</p><div class="leader-tags"><span>文化</span><span>间谍</span></div></div><span class="leader-arrow">↗</span></article>
+              <article class="leader-card" data-tags="culture"><div class="leader-portrait portrait-maori" data-avatar="Kupe (Civ6)"><span>毛</span></div><div class="leader-info"><span class="leader-civ">毛利 · 海洋与自然</span><h3>库佩</h3><p>开局海洋探索，依靠自然地貌与保护区积累文化。</p><div class="leader-tags"><span>文化</span><span>海洋</span></div></div><span class="leader-arrow">↗</span></article>
+              <article class="leader-card" data-tags="aggressive"><div class="leader-portrait portrait-colombia" data-avatar="Simón Bolívar (Civ6)"><span>哥</span></div><div class="leader-info"><span class="leader-civ">大哥伦比亚 · 解放军</span><h3>西蒙·玻利瓦尔</h3><p>大将军与快速移动让中期战争拥有极强的节奏。</p><div class="leader-tags"><span>统治</span><span>机动</span></div></div><span class="leader-arrow">↗</span></article>
+            </div>
+            <div class="leader-directory" id="leader-directory" hidden>
+              <div class="directory-head"><div><span class="eyebrow"><span></span> 完整领袖名录</span><h3>文明 VI 全部领袖与人格</h3></div><p>包含本体、Rise & Fall、Gathering Storm、New Frontier Pass、Leader Pass 与免费领袖。重复人格按独立选择列出。</p></div>
+              <div class="directory-grid">
+                <div><b>美洲与大西洋</b><p>美国：西奥多·罗斯福（公牛麋鹿）、西奥多·罗斯福（骑兵）</p><p>巴西：佩德罗二世　加拿大：威尔弗里德·劳里埃</p><p>大哥伦比亚：西蒙·玻利瓦尔　毛利：库佩</p></div>
+                <div><b>欧洲 · 西部</b><p>英国：维多利亚（帝国时代）、维多利亚（蒸汽时代）、伊丽莎白一世、埃莉诺</p><p>法国：凯瑟琳·德·美第奇（黑王后）、凯瑟琳·德·美第奇（盛世）、埃莉诺</p><p>德国：腓特烈·巴巴罗萨、路德维希二世　西班牙：腓力二世</p></div>
+                <div><b>欧洲 · 南部与东部</b><p>希腊：伯里克利、戈尔戈　罗马：图拉真、尤利乌斯·恺撒</p><p>俄罗斯：彼得　波兰：雅德维加　葡萄牙：若昂三世</p><p>瑞典：克里斯蒂娜　苏格兰：罗伯特·布鲁斯　匈牙利：马加什一世</p></div>
+                <div><b>近东、非洲与地中海</b><p>阿拉伯：萨拉丁（苏丹）、萨拉丁（维齐尔）　埃及：克娄巴特拉（埃及）、克娄巴特拉（托勒密）、拉美西斯二世</p><p>波斯：居鲁士、纳迪尔沙　奥斯曼：苏莱曼　腓尼基：狄多</p><p>埃塞俄比亚：孟尼利克二世　努比亚：阿曼妮托蕾　马里：曼萨·穆萨、松迪亚塔·凯塔</p></div>
+                <div><b>亚洲 · 东亚</b><p>中国：秦始皇（天命）、秦始皇（统一者）、武则天、永乐、忽必烈（中国）</p><p>日本：北条时宗、德川家康　韩国：善德女王、世宗大王</p><p>蒙古：成吉思汗、忽必烈（蒙古）　越南：征氏姐妹中的征侧</p></div>
+                <div><b>亚洲 · 南亚与东南亚</b><p>印度：甘地、旃陀罗笈多　印度尼西亚：吉塔嘉</p><p>高棉：阇耶跋摩七世　暹罗：暂无独立领袖条目</p><p>马来与群岛内容以印度尼西亚、毛利、越南等扩展文明为主。</p></div>
+                <div><b>北方、草原与新文明</b><p>挪威：哈拉尔·哈德拉达（挪威国王）、哈拉尔·哈德拉达（瓦兰吉）</p><p>苏美尔：吉尔伽美什　斯基泰：托米丽司　祖鲁：恰卡</p><p>玛雅：六天女王　印加：帕查库特克　阿兹特克：蒙特祖玛</p></div>
+                <div><b>其他扩展领袖</b><p>拜占庭：巴西尔二世、西奥多拉　高卢：安比奥里克斯</p><p>刚果：姆本巴·恩津加　格鲁吉亚：塔玛丽　马其顿：亚历山大</p><p>克里：庞德梅克　巴比伦：汉谟拉比　越南：征氏姐妹中的征侧</p></div>
+              </div>
+              <p class="directory-note">名录按照 Civilization VI Civilopedia 的领袖条目整理；不同平台与 DLC 组合可能影响可用领袖数量。</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="section container" id="roadmap" aria-labelledby="roadmap-title">
+          <div class="section-heading"><div><p class="eyebrow"><span></span> 第三章 · 回合路线图</p><h2 id="roadmap-title">开局前 100 回合</h2></div><a class="small-link" href="#cheatsheet">查看完整手册 →</a></div>
+          <div class="timeline"><article class="timeline-item current"><div class="timeline-marker">01</div><div><span class="timeline-time">TURN 01 — 30</span><h3>早期探索 <i>· 奠定根基</i></h3><p>派出侦察兵寻找自然奇观、村庄与邻居。锁定首都位置，优先解锁科技与市政树。</p><div class="progress"><span style="width:30%"></span></div></div></article><article class="timeline-item"><div class="timeline-marker">02</div><div><span class="timeline-time">TURN 30 — 60</span><h3>区域规划 <i>· 选择方向</i></h3><p>规划学院、商业中心与工业区的邻接关系。建立第二座城市，开始专精你的胜利路线。</p><div class="progress"><span style="width:60%"></span></div></div></article><article class="timeline-item"><div class="timeline-marker">03</div><div><span class="timeline-time">TURN 60 — 100</span><h3>中期扩张 <i>· 滚起雪球</i></h3><p>完成核心区域，升级关键单位。利用贸易路线连接城市，并开始针对性压制竞争对手。</p><div class="progress"><span style="width:100%"></span></div></div></article></div>
+          <div class="roadmap-notes"><div><b>✓ 每 10 回合检查</b><span>城市幸福度 · 忠诚度 · 住房 · 贸易路线 · 邻国军力</span></div><div><b>⚠ 常见陷阱</b><span>过早建奇观、忽视军力、每座城市建相同区域、科技文化树平均分配</span></div><div><b>★ 政策卡思路</b><span>开局用生产加速卡，中期切换区域/军队卡，黄金时代优先选择能放大主线的 Dedication</span></div></div>
+        </section>
+
+        <section class="section tinted" id="cheatsheet" aria-labelledby="cheatsheet-title"><div class="container"><div class="section-heading"><div><p class="eyebrow"><span></span> 第四章 · 规划手册</p><h2 id="cheatsheet-title">区域邻接速查表</h2></div><p>好的规划，胜过一切<br />临时抱佛脚。</p></div><div class="table-wrap"><table><thead><tr><th>区域</th><th>核心产出</th><th>最佳邻接</th><th>规划口诀</th><th>推荐时代</th></tr></thead><tbody><tr><td><span class="district-icon">⌁</span><b>学院</b></td><td><span class="yield science-text">+ 科技</span></td><td>山脉 +1 · 雨林 +1 · 地热裂缝 +2</td><td>靠山吃山，雨林也香</td><td><span class="era-tag">远古</span></td></tr><tr><td><span class="district-icon">✣</span><b>圣地</b></td><td><span class="yield faith-text">+ 信仰</span></td><td>山脉 +1 · 自然奇观 +2 · 森林 +1</td><td>奇观旁边建圣地</td><td><span class="era-tag">远古</span></td></tr><tr><td><span class="district-icon">◇</span><b>商业中心</b></td><td><span class="yield gold-text">+ 金币</span></td><td>河流 +2 · 港口 +2 · 其他区域 +0.5</td><td>沿河而建，财源滚滚</td><td><span class="era-tag">古典</span></td></tr><tr><td><span class="district-icon">⚒</span><b>工业区</b></td><td><span class="yield production-text">+ 生产力</span></td><td>矿山 +1 · 采石场 +1 · 渡槽 +2</td><td>围绕城市，连成一片</td><td><span class="era-tag">古典</span></td></tr></tbody></table></div></div></section>
+        <section class="section container advanced-section" id="advanced" aria-labelledby="advanced-title"><div class="section-heading"><div><p class="eyebrow"><span></span> 第五章 · 进阶技巧</p><h2 id="advanced-title">把“能赢”变成“赢得漂亮”</h2></div><p>真正的优势来自<br />每一个细节的复利。</p></div><div class="advanced-grid"><article><span>01</span><h3>锁定地块，而不是锁定建筑</h3><p>发现高邻接位置后先用区域规划锁住地块，即使暂时没有资源完成，也不要让 AI 或边界扩张抢走你的核心位置。</p></article><article><span>02</span><h3>专精城市，避免平均主义</h3><p>让一座城市负责生产，一座城市负责科技，一座城市负责伟人或金币。不同城市的区域组合应该互相补足。</p></article><article><span>03</span><h3>黄金时代要提前准备</h3><p>在时代结束前完成尤里卡与鼓舞、探索新大陆、建立贸易路线并解放城邦，时代分数会显著提高。</p></article><article><span>04</span><h3>外交界面就是情报面板</h3><p>关注议程、偏好、战争目标和军力排名。和强敌保持开放边界与贸易，能为你争取关键的发育窗口。</p></article><article><span>05</span><h3>战争要有退出条件</h3><p>提前设定目标：夺首都、拿资源、拆区域或逼迫赔款。目标完成后及时议和，把生产力转回你的主胜利路线。</p></article><article><span>06</span><h3>不要忽略城邦任务</h3><p>城邦提供的宗主国加成常常比一座普通城市更高。派遣使者前先看任务，顺手完成可以获得滚雪球式收益。</p></article></div></section>
+        <section class="section tinted glossary-section" aria-labelledby="glossary-title"><div class="container"><div class="section-heading"><div><p class="eyebrow"><span></span> 附录 · 新手词典</p><h2 id="glossary-title">常见术语，一眼读懂</h2></div></div><div class="glossary"><div><b>尤里卡 Eureka</b><p>完成特定条件后，相关科技获得一次性研究进度。</p></div><div><b>鼓舞 Inspiration</b><p>完成市政树条件后，相关市政获得一次性文化进度。</p></div><div><b>邻接加成</b><p>区域从相邻地形、区域或建筑获得的额外产出。</p></div><div><b>铺城 Wide</b><p>建立更多城市，以总量和区域上限换取发展空间。</p></div><div><b>高密度 Tall</b><p>少建城市，但让每座城市拥有更多人口和完整区域。</p></div><div><b>黄金时代</b><p>时代分数达标后获得，可选择特殊能力强化当前战略。</p></div></div></div></section>
+        <section class="section container faq-section" aria-labelledby="faq-title"><div class="section-heading"><div><p class="eyebrow"><span></span> 附录 · 实战问答</p><h2 id="faq-title">新手最容易卡住的地方</h2></div><p>遇到问题时，先看<br />是不是节奏出了偏差。</p></div><div class="faq-list"><details open><summary>首都应该建在哪里？<span>+</span></summary><p>优先考虑水源、至少一个高产地块、可持续的粮食与生产力，以及未来区域的位置。不要只追求一张截图里的完美邻接；能快速成长、能防守、能连接第二城的地点通常更好。</p></details><details><summary>为什么我的科技领先，却还是赢不了？<span>+</span></summary><p>科技值只代表解锁速度，不代表项目完成速度。科技胜利后期需要高生产城市、工业区、太空港和贸易路线。请把生产力、金币和政策卡同时转向太空项目。</p></details><details><summary>什么时候应该发动第一场战争？<span>+</span></summary><p>当你拥有兵种时代优势、明确目标和足够经济支持时。战争前先确认铁、马、硝石等资源，侦察城市防御，准备至少一支近战占城部队和一支远程输出部队。</p></details><details><summary>区域到底应该什么时候建？<span>+</span></summary><p>先锁定高价值地块，再决定立即建造还是延后。早期不要为了追求邻接把城市发展完全停住；通常先保证开拓者、军队和基础建筑，再进入区域连锁。</p></details><details><summary>我该不该为了奇观改变整个城市规划？<span>+</span></summary><p>大多数时候不应该。奇观是路线的放大器，不是路线本身。只有当奇观与文明能力、地形和胜利目标高度契合时，才值得为它预留生产窗口。</p></details></div></section>
+      </main>
+
+      <footer class="site-footer"><div class="container footer-inner"><div class="brand"><span class="brand-mark">VI</span><span><b>文明6</b><small>终极拓荒指南</small></span></div><p>这是一个由玩家制作的非商业性攻略站。<br />所有游戏内容、领袖头像与商标归 2K Games / Firaxis Games 所有。</p><a href="https://civilization.2k.com/" target="_blank" rel="noreferrer">访问文明 VI 官方网站 ↗</a><span class="copyright">© 2024 CIVILIZATION GUIDE</span></div></footer>
+    </div>
+    <dialog class="modal" id="victory-modal"><button class="modal-close" type="button" aria-label="关闭">×</button><p class="eyebrow"><span></span> 胜利路线</p><h2 id="modal-title"></h2><p id="modal-description"></p><div class="modal-steps" id="modal-steps"></div></dialog>
+    <script src="script.js"></script>
+  </body>
+</html>
