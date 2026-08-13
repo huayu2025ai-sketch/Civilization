@@ -125,12 +125,12 @@ databaseTabs.forEach((tab) => {
 // 资料库解释层：名称负责索引，下面的说明负责帮助玩家做决定。
 const databaseNotes = {
   tech: {
-    '远古时代': '开局先解决生存问题：采矿提高生产，畜牧业找马，弓箭处理野蛮人。写作通常是学院路线的第一站。',
-    '古典时代': '这是第一次分流期：铁器和骑术决定早期战争，货币支持贸易与金币，教育则把学院转成稳定科技。',
-    '中世纪': '优先找能让当前城市升级的节点：教育强化学院，机械强化远程，银行业强化商业中心。不要为了“走完科技树”平均研究。',
-    '文艺复兴': '火药、经济学和工业化会直接改变军力与生产力。准备转中期战争或太空路线时，先确认资源和产能是否跟得上。',
-    '工业时代': '这一时代的核心不是解锁数量，而是把生产力放大：电力、炼钢、化肥和飞行分别影响城市、军队、人口和地图控制。',
-    '现代至信息时代': '进入收尾阶段后，研究必须服务终局项目：火箭学与卫星服务科技胜利，计算机和人工智能扩大后期研究优势。'
+    '远古时代': '开局先解决生存问题。采矿让你能改良矿山、砍树并规划高生产城市；畜牧业寻找马匹并解锁牧场；弓箭负责处理野蛮人。若准备建学院，写作通常是第一条明确目标。判断标准：研究结束后，你能立刻改良、生产或解决一个现实问题。',
+    '古典时代': '这是第一次分流期。铁器和骑术决定早期战争，货币支撑商业中心与贸易，数学改善区域与奇观节奏，教育则把学院转成稳定科技引擎。不要按时代顺序盲点：邻国逼近时先拿军力科技，和平扩张时再补经济科技。',
+    '中世纪': '把已有区域升级起来，而不是继续铺新摊子。教育优先给学院城市，机械强化弩手和防守，学徒制为工业区与生产力做准备，银行业强化商业中心。判断标准：你的核心城市是否开始稳定产出科技、金币或生产力。',
+    '文艺复兴': '火药、经济学和工业化会直接改变军力与城市效率。火药让你拥有更可靠的中期军队；经济学改善商业体系；工业化把生产力推向后期项目。准备转战争或太空路线时，先确认硝石、煤炭和高生产城市是否到位。',
+    '工业时代': '核心是把生产力、人口和地图控制放大。电力支持高级建筑与项目，炼钢改善军力，化肥让粮食与人口继续增长，飞行打开空军与旅游路线。不要为了追最高科技放弃当前急需的防御、住房或生产。',
+    '现代至信息时代': '进入收尾阶段后，每项研究都应服务终局。火箭学、卫星和机器人是科技胜利的连续任务；计算机与人工智能扩大研究优势；核裂变既是科技节点也是战略威慑。判断标准：下一项研究是否会缩短你的胜利回合，不能就先补生产、资源或防守。'
   },
   civic: {
     '远古时代': '法典给基础政策，早期帝国帮助扩张，军事传统服务战争。市政完成后第一件事是检查政策卡，而不是立刻点下一个研究。',
@@ -170,11 +170,12 @@ function addDatabaseNotes(panelSelector, noteGroup) {
     if (!note || card.querySelector('.db-detail')) return;
     const detail = document.createElement('div');
     detail.className = 'db-detail';
-    detail.innerHTML = `<b>怎么用</b><span>${note}</span>`;
+    detail.innerHTML = `<b>${noteGroup === databaseNotes.tech ? '研究重点' : '怎么用'}</b><span>${note}</span>`;
     card.append(detail);
   });
 }
-addDatabaseNotes('.database-panel[data-db-panel="tech"] .era-columns > div, .database-panel[data-db-panel="civic"] .era-columns > div', { ...databaseNotes.tech, ...databaseNotes.civic });
+addDatabaseNotes('.database-panel[data-db-panel="tech"] .era-columns > div', databaseNotes.tech);
+addDatabaseNotes('.database-panel[data-db-panel="civic"] .era-columns > div', databaseNotes.civic);
 addDatabaseNotes('.database-panel[data-db-panel="building"] .catalog-grid article', databaseNotes.buildings);
 addDatabaseNotes('.database-panel[data-db-panel="unit"] .unit-catalog article', databaseNotes.units);
 
