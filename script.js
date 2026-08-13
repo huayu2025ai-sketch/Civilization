@@ -108,6 +108,26 @@ if (leaderPageDirectory && location.pathname.endsWith('leaders.html')) {
   leaderPageDirectory.innerHTML = `<div class="directory-head"><div><p class="eyebrow"><span></span> 完整领袖名录</p><h3>文明 VI 领袖与文明索引</h3></div><p>按文明查找全部领袖。重点卡片负责推荐，下面名录负责完整查阅。</p></div><div class="directory-grid">${completeLeaders.map(([civ, leaders]) => `<div><b>${civ}</b><p>${leaders}</p></div>`).join('')}</div><p class="directory-note">名录覆盖本体与主要 DLC / Pass 内容；不同版本与平台可能存在领袖可用性差异。</p>`;
 }
 
+const resourceTabData = [
+  ['奢侈资源', '提升宜居度，每种奢侈资源通常只需改良一份就能服务多个城市。优先改良能解决当前宜居度问题的资源，多余份额可以交易换金币。', '象牙 · 香料 · 丝绸 ·  wine · 染料 · 大理石 · 玉 · 银 · 黄金 · 乳香 · 可可 · 咖啡 · 茶 · 烟草 · 柑橘 · 棉花 · 糖 · 盐 · 水银 · 珍珠 · 皮草'],
+  ['战略资源', '决定特定兵种、舰船和发电方式能否生产。战争前先确认资源位置、改良设施和储备数量；没有资源时提前准备替代兵种。', '马：骑兵与重骑兵 · 铁：剑士与部分武器 · 硝石：火枪与炮兵 · 煤：工业与战舰 · 石油：坦克、飞机与发电 · 铝：现代空军 · 铀：核武器与核电'],
+  ['加成资源', '主要提供地块产出和改良后的即时收益。它们通常不是必须囤积的战略物资，优先改良首都和高人口城市附近的高产资源。', '小麦 · 大米 · 玉米 · 牛 · 羊 · 鹿 · 香蕉 · 石头 · 螃蟹 · 鱼 · 贝壳 · 铜 · 石膏'],
+  ['资源的四步任务', '发现资源后按顺序处理：一，确认它服务哪座城市；二，研究对应科技；三，派工人改良；四，决定保留、交易或作为战争目标。', '优先级：战略资源 ＞ 当前急需的奢侈资源 ＞ 能立即增加生产的加成资源；战争前不要出售唯一的战略资源。']
+];
+const resourceTab = document.createElement('button');
+resourceTab.className = 'database-tab';
+resourceTab.dataset.db = 'resource';
+resourceTab.setAttribute('role', 'tab');
+resourceTab.setAttribute('aria-selected', 'false');
+resourceTab.textContent = '资源';
+const databaseTabList = document.querySelector('.database-tabs');
+if (databaseTabList) databaseTabList.append(resourceTab);
+const resourcePanel = document.createElement('div');
+resourcePanel.className = 'database-panel';
+resourcePanel.dataset.dbPanel = 'resource';
+resourcePanel.innerHTML = `<div class="db-summary"><b>资源索引</b><span>按用途判断改良、储备、交易和战争目标</span></div><div class="resource-catalog">${resourceTabData.map(([title, note, items]) => `<article><span class="resource-kind">${title}</span><h3>${title === '战略资源' ? '决定你能不能生产' : title === '奢侈资源' ? '决定城市能不能成长' : title === '加成资源' ? '决定地块值不值得改良' : '发现资源后的行动顺序'}</h3><p>${note}</p><div class="resource-list">${items.split(' · ').map((item) => `<details><summary>${item}<span>+</span></summary><p>${title === '战略资源' ? '生产相关单位或设施前，确认数量、改良状态与路线是否匹配。' : title === '奢侈资源' ? '改良一份后先解决城市宜居度；重复资源通常适合交易。' : '优先安排工人改良能立刻带来粮食、生产或金币的地块。'}</p></details>`).join('')}</div></article>`).join('')}</div>`;
+document.querySelector('.database-panel[data-db-panel="unit"]')?.after(resourcePanel);
+
 const databaseTabs = document.querySelectorAll('.database-tab');
 const databasePanels = document.querySelectorAll('.database-panel');
 databaseTabs.forEach((tab) => {
