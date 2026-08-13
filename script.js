@@ -51,6 +51,20 @@ directoryButton.addEventListener('click', () => {
   directoryButton.textContent = isOpen ? '查看完整名录 67' : '收起完整名录';
 });
 
+const databaseTabs = document.querySelectorAll('.database-tab');
+const databasePanels = document.querySelectorAll('.database-panel');
+databaseTabs.forEach((tab) => {
+  tab.addEventListener('click', () => {
+    const target = tab.dataset.db;
+    databaseTabs.forEach((item) => {
+      const active = item === tab;
+      item.classList.toggle('active', active);
+      item.setAttribute('aria-selected', String(active));
+    });
+    databasePanels.forEach((panel) => panel.classList.toggle('active', panel.dataset.dbPanel === target));
+  });
+});
+
 const searchInput = document.querySelector('#site-search');
 searchInput.addEventListener('input', () => {
   const query = searchInput.value.trim().toLowerCase();
