@@ -216,6 +216,52 @@ enhanceDatabaseEntries('.database-panel[data-db-panel="civic"] .era-columns > di
 enhanceDatabaseEntries('.database-panel[data-db-panel="building"] .catalog-grid article', 'building');
 enhanceDatabaseEntries('.database-panel[data-db-panel="unit"] .unit-catalog article', 'unit');
 
+// 统治胜利重点：标出直接影响军力、升级、攻城和军团效率的科技与市政。
+const dominationHighlights = {
+  tech: {
+    '采矿': '改良矿山并砍伐森林，帮助首都更快生产军队、军营和开拓者。',
+    '弓箭': '解锁早期远程单位，是清理野蛮人和压制邻国的低成本战力。',
+    '青铜器': '显示铁资源并解锁兵营，为剑士和大将军路线做准备。',
+    '骑术': '解锁骑手；开放地形中可绕后、掠夺并快速切断敌方补给。',
+    '铁器': '解锁剑士并显示铁，是古典时代主动战争的关键节点。',
+    '工程': '提供攻城路线与突破城市防御所需的工程能力。',
+    '机械': '解锁弩手，远程火力升级后能显著降低攻城损耗。',
+    '学徒制': '解锁工业区和工坊，为持续生产军团、攻城器械和升级单位提供产能。',
+    '军事战术': '强化中期军队与防御体系，适合在战争窗口前补齐。',
+    '火药': '解锁火枪手和更强的攻城节奏，常是中期军力跃迁点。',
+    '工业化': '工厂带来区域范围生产力，让核心城市持续供给前线。',
+    '炼钢': '强化现代军力与城市防御，敌方进入现代化后应及时跟进。',
+    '内燃机': '解锁坦克等高速单位，适合开放地图上的突破与追击。',
+    '飞行': '解锁空军路线，后期可绕过地面防线直接打击城市。',
+    '核裂变': '解锁核武器与核能，是终局威慑和快速结束战争的节点。'
+  },
+  civic: {
+    '军事传统': '解锁军事政策和侧翼体系，帮助早期军队以更低成本作战。',
+    '防御战术': '面对邻国压力时提高城市和军队生存能力，避免被迫停战发育。',
+    '军事训练': '强化单位生产与军事政策，是准备第一场主动战争的前置。',
+    '政治哲学': '解锁寡头政府，早期战争路线常用它获得更强的近战与政策组合。',
+    '雇佣兵': '降低升级成本并改善军队维护，适合把老兵快速换代。',
+    '民族主义': '解锁军团，是统治路线从单兵作战进入编制作战的关键节点。',
+    '焦土政策': '强化掠夺与战争经济，适合在前线持续推进时使用。',
+    '动员': '解锁军队并进一步提高编制效率，后期攻城和决战前优先。',
+    '意识形态': '选择后期政府并准备战争政策，需结合敌人军力和你的经济承受力。',
+    '核计划': '解锁核武器相关政策与项目，适合用科技优势快速终结僵局。'
+  }
+};
+function markDominationEntries(panelSelector, notes) {
+  document.querySelectorAll(panelSelector).forEach((entry) => {
+    const name = entry.querySelector('summary')?.firstChild?.textContent.trim();
+    if (!name || !notes[name]) return;
+    entry.classList.add('domination-focus');
+    const summary = entry.querySelector('summary');
+    summary.insertAdjacentHTML('beforeend', '<span class="route-star" aria-label="统治胜利重点">★</span>');
+    const note = entry.querySelector('p');
+    if (note) note.insertAdjacentHTML('beforebegin', `<p class="route-note"><b>统治胜利重点</b>${notes[name]}</p>`);
+  });
+}
+markDominationEntries('.database-panel[data-db-panel="tech"] .db-entry', dominationHighlights.tech);
+markDominationEntries('.database-panel[data-db-panel="civic"] .db-entry', dominationHighlights.civic);
+
 const searchInput = document.querySelector('#site-search, #leader-search');
 if (searchInput) {
   searchInput.addEventListener('input', () => {
