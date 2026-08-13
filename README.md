@@ -1,6 +1,6 @@
 # 文明6 · 终极拓荒指南
 
-一个面向《文明 VI》玩家的中文静态攻略站，采用“首页总览 + 专题页面”的结构，方便按主题浏览基础玩法、胜利路线、领袖资料和实战攻略。
+一个面向《文明 VI》玩家的中文静态攻略站，采用"首页总览 + 专题页面"的结构，方便按主题浏览基础玩法、胜利路线、领袖资料和实战攻略。
 
 ## 页面导航
 
@@ -9,6 +9,7 @@
 | 首页总览 | `index.html` | 网站入口、4X核心循环、内容概览与精选攻略 |
 | 基础玩法 | `basics.html` | 探索、扩张、开发、威慑，城市、区域、资源与时代 |
 | 胜利路线 | `victories.html` | 科技、文化、统治、宗教、外交、分数六种胜利 |
+| 征服之路 | `domination.html` | 征服胜利专题、战斗机制、军事战略与实战指南 |
 | 领袖百科 | `leaders.html` | 领袖筛选、文明特色、胜利方向与本地头像 |
 | 资料库 | `database.html` | 科技树、市政树、建筑、区域、兵种与单位 |
 | 实战手册 | `playbook.html` | 前50回合开局、路线执行、战争、政策与决策速查 |
@@ -20,6 +21,7 @@
 ├── index.html              # 首页总览
 ├── basics.html             # 基础玩法
 ├── victories.html          # 胜利路线
+├── domination.html         # 征服之路
 ├── leaders.html            # 领袖百科
 ├── database.html           # 科技/市政/建筑/兵种资料库
 ├── playbook.html           # 实战手册
@@ -80,6 +82,7 @@ docker compose down
 - 领袖头像使用本地资源，避免外部图片加载失败。
 - 资料库支持科技树、市政树、建筑区域、兵种单位四类标签切换。
 - 页面内搜索可高亮包含关键词的内容卡片。
+- 征服之路专题提供战斗机制与军事战略指南。
 - 使用语义化 HTML、CSS 变量、Grid/Flexbox 和原生 ES6 JavaScript。
 
 ## 技术栈
@@ -88,6 +91,7 @@ docker compose down
 - CSS3：CSS Variables、Grid、Flexbox、媒体查询、动画与过渡
 - Vanilla JavaScript：无依赖、无框架
 - Google Fonts：Cinzel、Noto Sans SC
+- Docker：容器化部署
 
 ## 内容说明
 
