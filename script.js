@@ -44,7 +44,7 @@ document.querySelectorAll('.filter').forEach((button) => {
 
 const directoryButton = document.querySelector('.filter-directory');
 const directory = document.querySelector('#leader-directory');
-directoryButton.addEventListener('click', () => {
+if (directoryButton && directory) directoryButton.addEventListener('click', () => {
   const isOpen = !directory.hidden;
   directory.hidden = isOpen;
   directoryButton.classList.toggle('active', !isOpen);
