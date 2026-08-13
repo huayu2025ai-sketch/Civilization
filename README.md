@@ -45,6 +45,32 @@ python3 -m http.server 8000
 
 然后访问：<http://localhost:8000>
 
+### Docker 部署
+
+使用 Docker Compose 启动静态站点，默认访问地址为 <http://localhost:8080>：
+
+```bash
+docker compose up -d --build
+```
+
+如需更换宿主机端口，可在启动时设置 `CIVILIZATION_PORT`：
+
+```bash
+CIVILIZATION_PORT=80 docker compose up -d --build
+```
+
+查看运行状态：
+
+```bash
+docker compose ps
+```
+
+停止服务：
+
+```bash
+docker compose down
+```
+
 ## 主要功能
 
 - 多页面专题导航，当前页面会自动高亮。
