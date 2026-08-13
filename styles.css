@@ -34,3 +34,70 @@
 .task-section{border-top:1px solid rgba(255,255,255,.035)}.task-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}.task-grid article{display:flex;flex-direction:column;min-height:190px;padding:21px;background:var(--panel)}.task-grid article>span{color:var(--gold);font:10px var(--serif);letter-spacing:.12em}.task-grid h3{font-size:16px;margin:16px 0 8px}.task-grid p{color:var(--muted);font-size:11px;line-height:1.85;margin:14px 0 18px}.task-grid b{color:var(--gold-light);font-size:10px;line-height:1.6;margin-top:auto}@media(max-width:850px){.task-grid{grid-template-columns:repeat(2,1fr)}}@media(max-width:620px){.task-grid{grid-template-columns:1fr}.task-grid article{min-height:145px}}.db-detail{display:grid;gap:4px;border-top:1px solid var(--line);margin-top:13px;padding-top:10px}.db-detail b{font-size:10px;color:var(--gold-light)}.db-detail span{font-size:10px;color:#a9b1bc;line-height:1.75}.catalog-grid article .db-detail,.unit-catalog article .db-detail{margin-top:14px}.db-entry-list{border-top:1px solid var(--line);margin-top:12px}.db-entry{border-bottom:1px solid rgba(255,255,255,.055);padding:8px 0}.db-entry:last-child{border-bottom:0}.db-entry summary{font:11px var(--sans);color:var(--text);display:flex;justify-content:space-between;gap:14px;cursor:pointer;list-style:none}.db-entry summary::-webkit-details-marker{display:none}.db-entry summary span{color:var(--gold);font-size:15px;line-height:1;transition:transform .2s}.db-entry[open] summary span{transform:rotate(45deg)}.db-entry p{color:var(--muted);font-size:10px;line-height:1.75;margin:8px 0 2px;padding-right:4px}.db-entry-list+.db-detail{margin-top:14px}.route-star{color:var(--gold-light)!important;font-size:13px!important;margin-left:auto}.route-note{border-left:2px solid var(--gold);padding-left:8px;color:var(--gold-light)!important}.route-note b{display:block;color:var(--gold);font-size:9px;margin-bottom:2px}.domination-focus summary{color:#f2dfb1}.resource-catalog{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.resource-catalog article{background:var(--panel);border:1px solid var(--line);padding:20px}.resource-kind{color:var(--gold);font:10px var(--serif);letter-spacing:.14em}.resource-catalog h3{font-size:17px;margin:11px 0 8px}.resource-catalog>article>p{color:var(--muted);font-size:11px;line-height:1.8}.resource-list{border-top:1px solid var(--line);margin-top:16px}.resource-list details{border-bottom:1px solid rgba(255,255,255,.055);padding:8px 0}.resource-list summary{display:flex;justify-content:space-between;color:var(--text);font-size:11px;cursor:pointer}.resource-list summary span{color:var(--gold);font-size:15px}.resource-list details p{color:var(--muted);font-size:10px;line-height:1.7;margin:7px 0 0}@media(max-width:620px){.resource-catalog{grid-template-columns:1fr}}
 .guide-cycle{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}.guide-cycle div,.guide-table>div,.formation-grid article,.decision-grid article{background:var(--panel);padding:20px}.guide-cycle div{display:grid;gap:7px}.guide-cycle b,.guide-table b,.decision-grid b{font:13px var(--serif);color:var(--gold-light)}.guide-cycle span,.guide-table span,.guide-table p,.formation-grid p,.decision-grid p{font-size:11px;line-height:1.8;color:var(--muted)}.guide-table{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}.guide-table span{display:block;border-top:1px solid var(--line);padding-top:10px;margin-top:10px;color:var(--gold)}.guide-table p{margin:8px 0 0}.formation-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}.formation-grid article{min-height:175px}.formation-grid article>span{color:var(--gold);font:10px var(--serif);letter-spacing:.13em}.formation-grid h3{font-size:16px;margin:13px 0 7px}.decision-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}.decision-grid article{min-height:150px}.decision-grid p{margin:10px 0 0}.guide-eras{margin-top:0}.checklist{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.checklist label{padding:15px 17px;border:1px solid var(--line);background:rgba(255,255,255,.025);color:var(--gold-light);font-size:12px}@media(max-width:850px){.guide-cycle,.formation-grid{grid-template-columns:repeat(2,1fr)}}@media(max-width:620px){.guide-cycle,.guide-table,.formation-grid,.decision-grid,.checklist{grid-template-columns:1fr}.guide-table>div{padding:17px}.checklist{gap:7px}}
 .route-guide-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.route-guide-grid article{background:var(--panel);border:1px solid var(--line);padding:22px;min-height:310px}.route-guide-grid article>span{color:var(--gold);font:10px var(--serif);letter-spacing:.13em}.route-guide-grid h3{font-size:19px;margin:13px 0 12px}.route-guide-grid p{color:var(--muted);font-size:11px;line-height:1.8;margin:7px 0}.route-guide-grid p b{color:var(--gold-light)}@media(max-width:620px){.route-guide-grid{grid-template-columns:1fr}.route-guide-grid article{min-height:0}}
+
+/* Unified compact layout: tighter reading rhythm and denser information blocks. */
+body{font-size:13px;line-height:1.6}
+.container{max-width:1120px;padding-left:24px;padding-right:24px}
+.site-header{height:68px}
+.nav-wrap{max-width:1168px;padding:0 24px;gap:26px}
+.main-nav{gap:20px}
+.main-nav a,.small-link{font-size:11px}
+.search-box{height:32px;width:188px}
+.brand-mark{width:34px;height:34px;font-size:18px}
+.brand b{font-size:14px}
+.brand small{font-size:9px;margin-top:3px}
+.section{padding-top:64px;padding-bottom:72px}
+.section-heading{margin-bottom:26px}
+.section-heading h2{font-size:28px}
+.eyebrow{margin-bottom:12px}
+.page-hero{padding-top:62px;padding-bottom:50px;min-height:280px}
+.page-hero h1{font-size:clamp(38px,5vw,62px);margin-bottom:14px}
+.page-hero>p:last-child{font-size:12px;line-height:1.8}
+.basics-section>.section-heading,.basics-section>.basics-grid,.basics-section>.resource-strip{width:calc(100% - 48px)}
+.basic-card{padding:19px 18px 17px;min-height:220px}
+.basic-icon{font-size:24px;margin-bottom:14px}
+.basic-card h3{font-size:16px;margin-bottom:7px}
+.basic-card p{font-size:10px;line-height:1.65;margin-bottom:13px}
+.tip-line{padding-top:8px;font-size:9px}
+.knowledge-grid article{padding:16px;min-height:155px}
+.knowledge-grid article p{font-size:10px;line-height:1.7;margin:8px 0 10px}
+.knowledge-grid article small{padding-top:8px;font-size:9px}
+.resource-guide{gap:1px}
+.resource-column{padding:17px}
+.resource-column h3{font-size:14px;margin-bottom:6px}
+.resource-column p{font-size:10px;line-height:1.7;min-height:62px}
+.resource-column li{font-size:9px}
+.site-footer{padding:25px 0}
+.footer-inner{gap:24px}
+.home-entry{min-height:210px;padding:19px 17px}
+.task-grid article{min-height:165px;padding:17px}
+.timeline-card,.route-card,.advice-grid article{padding:19px;min-height:160px}
+.advanced-grid article,.route-guide-grid article{padding:18px}
+.modal{padding:28px}
+
+@media (max-width:850px){
+  .nav-wrap{gap:16px}
+  .main-nav{gap:12px}
+  .search-box{width:150px}
+  .page-hero{padding-top:54px;padding-bottom:42px;min-height:250px}
+  .section{padding-top:52px;padding-bottom:58px}
+  .basics-section>.section-heading,.basics-section>.basics-grid,.basics-section>.resource-strip{width:calc(100% - 36px)}
+}
+
+@media (max-width:620px){
+  .container{padding-left:18px;padding-right:18px}
+  .site-header{height:62px}
+  .nav-wrap{padding:0 18px}
+  .main-nav{top:62px}
+  .page-hero{padding-top:45px;padding-bottom:34px;min-height:220px}
+  .page-hero h1{font-size:clamp(34px,10vw,48px)}
+  .section{padding-top:44px;padding-bottom:50px}
+  .section-heading{margin-bottom:20px}
+  .section-heading h2{font-size:24px}
+  .basics-section>.section-heading,.basics-section>.basics-grid,.basics-section>.resource-strip{width:100%}
+  .basic-card{padding:17px 16px;min-height:unset}
+  .knowledge-grid article{min-height:unset}
+  .resource-column{padding:15px}
+  .resource-column p{min-height:unset}
+  .site-footer{padding:22px 0}
+}
