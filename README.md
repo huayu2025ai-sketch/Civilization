@@ -49,16 +49,10 @@ python3 -m http.server 8000
 
 ### Docker 部署
 
-使用 Docker Compose 启动静态站点，默认访问地址为 <http://localhost:8080>：
+使用 Docker Compose 启动静态站点：
 
 ```bash
 docker compose up -d --build
-```
-
-如需更换宿主机端口，可在启动时设置 `CIVILIZATION_PORT`：
-
-```bash
-CIVILIZATION_PORT=80 docker compose up -d --build
 ```
 
 查看运行状态：
@@ -66,6 +60,10 @@ CIVILIZATION_PORT=80 docker compose up -d --build
 ```bash
 docker compose ps
 ```
+
+站点只在 Docker 网络中暴露容器 `80` 端口。使用 Nginx Proxy Manager 时，将上游设置为
+`civilization:80`（或容器名 `civilization-guide:80`），并确保代理容器与本站点位于同一
+Docker 网络。
 
 停止服务：
 

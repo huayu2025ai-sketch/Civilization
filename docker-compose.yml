@@ -5,11 +5,11 @@ services:
       dockerfile: Dockerfile
     image: civilization-guide:latest
     container_name: civilization-guide
-    ports:
-      - "${CIVILIZATION_PORT:-8080}:80"
+    expose:
+      - "80"
     restart: unless-stopped
     healthcheck:
-      test: ["CMD-SHELL", "wget --no-verbose --tries=1 --spider http://127.0.0.1/ || exit 1"]
+      test: ["CMD-SHELL", "wget -q --spider http://127.0.0.1/healthz || exit 1"]
       interval: 30s
       timeout: 5s
       retries: 3
