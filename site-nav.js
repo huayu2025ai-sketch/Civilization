@@ -17,6 +17,12 @@ if (nav && !nav.querySelector('a[href="domination.html"]')) {
   guideLink.textContent = '完整攻略';
   nav.insertBefore(guideLink, nav.querySelector('a[href="playbook.html"]'));
 }
+if (nav && !nav.querySelector('a[href="tips.html"]')) {
+  const tipsLink = document.createElement('a');
+  tipsLink.href = 'tips.html';
+  tipsLink.textContent = '技巧库';
+  nav.insertBefore(tipsLink, nav.querySelector('a[href="playbook.html"]'));
+}
 const currentPage = location.pathname.split('/').pop() || 'index.html';
 document.querySelectorAll('.main-nav a').forEach((link) => {
   if (link.getAttribute('href') === currentPage) link.classList.add('current');
